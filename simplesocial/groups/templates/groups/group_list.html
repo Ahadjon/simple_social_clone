@@ -26,7 +26,7 @@
         <a href="{% url 'groups:single' slug=group.slug %}">
             <h3 class="title list-group-item-heading">{{group.name}}</h3>
             <div class="list-group-item-text container-fluid">
-                {{group.description_html|save}}
+                {{ group.description_html|safe }}
                 <div class="row">
                     <div class="col-md-4">
                         <span class="badge">{{group.members.count}}</span>

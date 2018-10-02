@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.contrib.auth.mixins import (LoginRequiredMixin, PermissionRequiredMixin)
 from django.urls import reverse
 from django.views import generic
-from simplesocial.groups.models import Group, GroupMember
+from groups.models import Group, GroupMember
 from django.shortcuts import get_object_or_404
 from django.contrib import messages
 

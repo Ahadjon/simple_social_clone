@@ -35,8 +35,8 @@ class Group(models.Model):
 
 
 class GroupMember(models.Model):
-    group = models.ForeignKey(Group, related_name='membership')
-    user = models.ForeignKey(User, related_name='user_groups')
+    group = models.ForeignKey(Group, related_name='membership', on_delete=models.PROTECT)
+    user = models.ForeignKey(User, related_name='user_groups', on_delete=models.PROTECT)
 
     def __str__(self):
         return self.user.username
